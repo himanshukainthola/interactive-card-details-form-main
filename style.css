@@ -1,0 +1,25 @@
+:root{
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-Light-grayish-violet: hsl(270, 3%, 87%);
+    --clr-Dark-grayish-violet: hsl(279, 6%, 55%);
+    --clr-Very-dark-violet: hsl(278, 68%, 11%);
+    --clr-Red : hsl(0, 100%, 66%);
+
+
+    --ff-accent: 'Space Grotesk', sans-serif;
+
+    
+}
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    Font-size: 18px;
+}
