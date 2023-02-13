@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Interactive card details form</title>
-
 </head>
+
 <body>
-  <main class="container">
-    <section>
-      <div class="card__back">
-        <span>0000</span>
-      </div>
-      <div class="card__front">
-        <img class="card__logo"src="images/card-logo.svg" alt="card-logo">
-        <div class="card__number">
-          <p><span>0000</span> <span>0000</span> <span>0000</span> <span>0000</span></p>
-        </div>
-        <div class="card__name">
-          <p>Jane Appleseed</p>
-          <p>00/00</p>
-        </div>
+  <main class="main">
+    <section class="top">
+      <img class="card-back" src="./images/bg-card-back.png" alt="" />
+      <img class="card-front" src="./images/bg-card-front.png" alt="" />
+      <img class="card-logo" src="./images/card-logo.svg" alt="" />
+
+      <p class="cvc-on-card">000</p>
+      <p class="number-on-card">0000 0000 0000 0000</p>
+
+      <div class="text-on-card">
+        <p class="name-on-card">Jane Appleseed</p>
+        <p class="date-on-card">
+          <span class="month">00</span>/<span class="year">00</span>
+        </p>
       </div>
     </section>
+
     <section class="card__details">
-      <div>
-        <form action="" id="" class="form" >
-          <label for="cardholder-name">Cardholder name</label>
-          <input type="text" placeholder="jane Appleseed" >
-          <label for="card-number">card number</label>
-          <input type="text" placeholder="1234 5678 9123 0000">
-          <label for="exp-date">exp.date (mm/yy)</label>
-          <input type="date" placeholder=>
-        </form>
-      </div>
+      <!-- <div class="form__message">
+        <img class="form__message__img" src="./images/icon-complete.svg" alt="" />
+        <h2 class="form__message__h2">Thank You!</h2>
+        <p class="form__message__p">We've added your card details</p>
+        <button class="form-btn form__message__btn">Continue</button>
+      </div> -->
+
+      <form action="" id="" class="form"> 
+        
+        <label for="cardholder-name">Cardholder name</label>
+        <input id="cardholder-name" type="text" placeholder="e.g. jane Appleseed" required />
+
+        <label for="card-number">card number</label>
+        <input id="card-number type=" text" placeholder="e.g.1234 5678 9123
+          0000" required inputmode="numeric" minlength="12" maxlength="12">  
+        <div>
+          <div>
+            <label for="exp-date">exp.date </label>
+            <input id="exp-date" type="text" placeholder="MM" required inputmode="numeric" minlength="2"
+              maxlength="2" />
+          </div>
+
+          <div>
+            <label for="month">(mm/yy)</label>
+            <input id="month" type="text" placeholder="YY" required inputmode="numeric" minlength="2" maxlength="2" />
+          </div>
+
+          <div>
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" placeholder="e.g. 123" required inputmode="numeric" minlength="3"
+              maxlength="3" />
+          </div>
+        </div>
+        <button class="form-btn" id="submit" type="submit">Confirm</button>
+      </form>
     </section>
   </main>
 </body>
+
 </html>
