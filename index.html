@@ -43,26 +43,31 @@
       <form action="" id="" class="form"> 
         
         <label for="cardholder-name">Cardholder name</label>
-        <input  id="cardholder-name" type="text" placeholder="e.g. Jane Appleseed" required />
-
+        <input  id="cardholder-name" type="text" placeholder="e.g. Jane Appleseed" 
+        required maxlength="25" />
+        <span class="error name-error hidden" id="name-error">wrong input</span>
         <label for="card-number">card number</label>
-        <input id="card-number" type=" text" placeholder="e.g. 1234 5678 9123 0000" required inputmode="numeric" minlength="12" maxlength="12">  
+        <input id="card-number" type=" text" placeholder="e.g. 1234 5678 9123 0000" 
+        required inputmode="numeric" minlength="12" maxlength="12">
+        <span class="error number-error hidden" id="number-error">wrong input</span>         
         <div>
           <div>
             <label for="month">exp.date </label>
-            <input id="month" type="text" placeholder="MM" required inputmode="numeric" minlength="2"
-              maxlength="2" />
+            <input id="month" type="text" placeholder="MM" 
+             required inputmode="numeric" minlength="2"maxlength="2" />  
           </div>
 
           <div>
             <label for="year">(mm/yy)</label>
-            <input id="year" type="text" placeholder="YY" required inputmode="numeric" minlength="2" maxlength="2" />
+            <input id="year" type="text" placeholder="YY" 
+             required inputmode="numeric" minlength="2" maxlength="2" />
           </div>
-
+          
           <div>
             <label for="cvc">CVC</label>
-            <input id="cvc" type="text" placeholder="e.g. 123" required inputmode="numeric" minlength="3"
-              maxlength="3" />
+            <input id="cvc" type="text" placeholder="e.g. 123" 
+             required inputmode="numeric" minlength="3" maxlength="3" />
+             <span class="error hidden" id="cvc-error">wrong input</span>
           </div>
         </div>
         <button class="form-btn" id="submit" type="submit">Confirm</button>

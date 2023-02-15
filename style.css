@@ -58,6 +58,8 @@
     --clr-Dark-grayish-violet: hsl(279, 6%, 55%);
     --clr-Very-dark-violet: hsl(278, 68%, 11%);
     --clr-Red : hsl(0, 100%, 66%);
+    --input-border1: hsl(249, 99%, 64%);
+    --input-border2: hsl(278, 94%, 30%);
 
 
     --ff-accent:'Space Grotesk', sans-serif;
@@ -181,6 +183,9 @@ body{
 
 }
 
+
+/*!================FORM====================*/
+
 .form__message > h2{
     font-size: 1.75rem;
     line-height: 2rem;
@@ -208,9 +213,6 @@ body{
     border-radius:.5rem;
 }
 
-
-
-/*!================FORM====================*/
 
 .form{
     font-size: 0.75rem;
@@ -252,7 +254,6 @@ input{
     height: 45px;
 
     padding: 11px 16px;
-    margin-bottom: 1rem;
     border : 1px solid var(--clr-Light-grayish-violet);
     border-radius: 0.5rem;
     position: relative;
@@ -261,13 +262,16 @@ input{
     color: var(--clr-Dark-grayish-violet);
 }
 
-input:hover{
+input:hover, 
+input:focus{
     cursor: pointer;
-    border: 1px solid Linear-gradient(to right, hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+    border: 2px solid var(--input-border1);
+    outline-color: var(--input-border2);
+    
 }
 
 label{
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
 
 .form>div{
@@ -298,6 +302,12 @@ label{
 #year,
 #cvc {
     margin-top: 9px;
+}
+
+.error{
+   margin-left:1rem;
+   font-size: 10px;
+   color: red;
 }
 
 .form-btn {
@@ -438,9 +448,9 @@ label{
         margin-bottom: 40px;
     }
 
-    #card-holder,
-    #card-number {
-        margin-bottom: 26px;
-    }
+    /* .error{
+        font-size: 10px;
+        margin-bottom: 12px;
+    } */
     
 }
