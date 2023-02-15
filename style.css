@@ -341,7 +341,7 @@ label{
 @media (min-width: 1100px) {
     .main{
         display: grid;
-        grid-template-columns: 1fr 1.75fr;
+        grid-template-columns: 1fr 2fr;
         margin: 0;
         max-width: revert;
         max-height: revert;
